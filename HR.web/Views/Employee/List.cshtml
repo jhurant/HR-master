@@ -1,0 +1,18 @@
+﻿@model HR.web.Models.ViewModels.EmployeeListViewModel
+@{
+    ViewBag.Title = "List";
+}
+
+<h1>Employee Listing</h1>
+
+<ul>
+    @foreach(var employee in Model.Employees){
+        <li>
+            @Html.ActionLink(employee.Name, "List", new { id = employee.Id})
+            @if (employee.Id == Model.SelectedId)
+            {
+                <p>@employee.Bio</p>
+            }
+        </li>
+    }
+</ul>

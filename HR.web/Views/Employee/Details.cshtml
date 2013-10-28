@@ -1,0 +1,14 @@
+﻿@model HR.web.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for @Model.Name</h2>
+
+<p>
+    @Model.Bio
+</p>
+
+
+<a href="@Url.Action("List")" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>Back to List</a>
